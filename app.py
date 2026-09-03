@@ -895,8 +895,9 @@ with gr.Blocks() as demo:
 # LAUNCH
 # ============================================================
 
-demo.launch(
-    inbrowser=True,
+ddemo.launch(
+    server_name="0.0.0.0",
+    server_port=int(os.environ.get("PORT", 7860)),
     css=custom_css,
     theme=gr.themes.Base(),
     allowed_paths=[BASE_DIR]
