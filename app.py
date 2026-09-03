@@ -3,6 +3,7 @@ from openai import OpenAI
 import gradio as gr
 import os
 from datetime import datetime
+from zoneinfo import ZoneInfo
 
 from context import system_prompt
 from tools import tools, handle_tool_calls
@@ -108,7 +109,7 @@ def chat(message, history):
     # FINAL RESPONSE
     # --------------------------------------------------------
 
-    timestamp = datetime.now().strftime("%I:%M %p")
+    timestamp = datetime.now(ZoneInfo("Asia/Kolkata")).strftime("%I:%M %p")
 
     return (
         f"{response.choices[0].message.content}"
@@ -202,7 +203,7 @@ hero_left_html = f"""
 
     <div class="twin-hero-socials">
 
-        <a
+        
             href="{LINKEDIN_URL}"
             target="_blank"
             rel="noopener noreferrer"
@@ -210,7 +211,7 @@ hero_left_html = f"""
             LinkedIn
         </a>
 
-        <a
+        
             href="{GITHUB_URL}"
             target="_blank"
             rel="noopener noreferrer"
@@ -490,7 +491,7 @@ projects_html = f"""
 
             <div class="twin-project-links">
 
-                <a
+                
                     href="{GITHUB_URL}"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -531,7 +532,7 @@ projects_html = f"""
 
             <div class="twin-project-links">
 
-                <a
+                
                     href="{GITHUB_URL}"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -571,7 +572,7 @@ projects_html = f"""
 
             <div class="twin-project-links">
 
-                <a
+                
                     href="{GITHUB_URL}"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -611,7 +612,7 @@ projects_html = f"""
 
             <div class="twin-project-links">
 
-                <a
+                
                     href="{GITHUB_URL}"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -647,7 +648,7 @@ projects_html = f"""
 
             <div class="twin-project-links">
 
-                <a
+                
                     href="{GITHUB_URL}"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -684,7 +685,7 @@ projects_html = f"""
 
             <div class="twin-project-links">
 
-                <a
+                
                     href="{GITHUB_URL}"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -732,7 +733,7 @@ contact_html = f"""
 
     <div class="twin-social-row">
 
-        <a
+        
             class="twin-social-btn"
             href="{LINKEDIN_URL}"
             target="_blank"
@@ -742,7 +743,7 @@ contact_html = f"""
         </a>
 
 
-        <a
+        
             class="twin-social-btn"
             href="{GITHUB_URL}"
             target="_blank"
@@ -752,7 +753,7 @@ contact_html = f"""
         </a>
 
 
-        <a
+        
             class="twin-social-btn"
             href="mailto:{EMAIL}"
         >
@@ -786,7 +787,7 @@ footer_html = f"""
 
     <div class="footer-links">
 
-        <a
+        
             href="{LINKEDIN_URL}"
             target="_blank"
             rel="noopener noreferrer"
@@ -796,7 +797,7 @@ footer_html = f"""
 
         ·
 
-        <a
+        
             href="{GITHUB_URL}"
             target="_blank"
             rel="noopener noreferrer"
