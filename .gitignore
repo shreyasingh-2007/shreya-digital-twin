@@ -2,3 +2,5 @@
 __pycache__/
 *.pyc
 .venv/
+emails.txt
+notifications.txt
